@@ -1,0 +1,56 @@
+
+.custom-data-list-container{
+	/*the container must be positioned relative:*/
+	position: relative;
+}
+
+.custom-data-list-items {
+	position: absolute;
+	border: 1px solid #d4d4d4;
+	/*border-bottom: none;*/
+	border-top: none;
+	z-index: 99;
+	/*position the custom-data-list items to be the same width as the container:*/
+	top: 100%;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+	max-height: 300px;
+	min-width: max-content;
+	width: 100%;
+}
+
+.custom-data-list-items div {
+	padding: 10px;
+	cursor: pointer;
+	background-color: #fff;
+	border-bottom: 1px solid #d4d4d4;
+}
+
+.custom-data-list-items div:not(.custom-data-list-group) {
+	cursor: pointer;
+}
+
+.custom-data-list-items div.custom-data-list-group {
+	cursor: no-drop;
+}
+
+.custom-data-list-items div:not(.custom-data-list-group):hover {
+	/*when hovering an item:*/
+	background-color: #e9e9e9;
+}
+.custom-data-list-active {
+	/*when navigating through the items using the arrow keys:*/
+	background-color: DodgerBlue !important;
+	color: #ffffff;
+}
+
+div.custom-data-list-group {
+	background-color: lightgrey;
+	font-weight: bold;
+}
+
+.custom-data-list-highlight {
+	font-weight: bold;
+	text-decoration: underline;
+}
